@@ -13,6 +13,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        El numero de vocales es : ${resultado}
+        El numero de vocales es: ${ resultado }
     </body>
 </html>
