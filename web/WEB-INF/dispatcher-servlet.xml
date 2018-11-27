@@ -13,15 +13,16 @@
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
-    <!--
+    <!-- wea
     <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
     -->
+    
     <!--
     Most controllers will use the ControllerClassNameHandlerMapping above, but
     for the index controller we are using ParameterizableViewController, so we must
     define an explicit mapping for it.
     -->
-    <!--
+    <!-- wea
     <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
             <props>
@@ -30,10 +31,10 @@
         </property>
     </bean>
     -->
+    
     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />
     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter" />
-    <bean class="org.springframework.web.servlet.mvc.support.ControllerBeanNameHandlerMapping" />
-    
+    <bean class="org.springframework.web.servlet.mvc.support.ControllerBeanNameHandlerMapping" />    
     
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"
@@ -41,13 +42,12 @@
           p:suffix=".jsp" />
 
     <context:component-scan base-package="controlador"/>
-    <context:component-scan base-package="servicios"/>
-    
+    <context:component-scan base-package="servicios"/>    
     
     <!--
     The index controller.
     -->
-    <!--
+    <!-- wea
     <bean name="indexController"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="index" />
