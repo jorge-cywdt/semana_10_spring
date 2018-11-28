@@ -15,13 +15,23 @@ public class controladorCadenas {
     @Autowired
     private cadenas objCad;
     
+    @RequestMapping("/home")
+    public ModelAndView home(HttpServletRequest request, HttpServletResponse response){
+        
+        ModelAndView model = new ModelAndView("/home");
+        model.addObject("titulo", "Home");
+        return model;
+        
+    }
+    
     @RequestMapping("/vocales")
     public ModelAndView muestraVocales(HttpServletRequest request, HttpServletResponse response){
         
-        ModelAndView mv = new ModelAndView("/vocales");
+        ModelAndView model = new ModelAndView("/vocales");
+        model.addObject("titulo", "Vocales");
         String cad = "liliana"; // String cad = request.getParameter("dato");                
-        mv.addObject("resultado", objCad.cuentaVocales(cad));
-        return mv;
+        model.addObject("resultado", objCad.cuentaVocales(cad));
+        return model;
         
     }
     
