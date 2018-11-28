@@ -16,7 +16,7 @@ public class controladorCadenas {
     private cadenas objCad;
     
     @RequestMapping("/controladorCadenas/vocales.htm")
-    protected ModelAndView muestraVocales(HttpServletRequest request, HttpServletResponse response){
+    public ModelAndView muestraVocales(HttpServletRequest request, HttpServletResponse response){
         
         ModelAndView mv = new ModelAndView("/vocales");
         String cad = "ejemplo"; // String cad = request.getParameter("dato");                
